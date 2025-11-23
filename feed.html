@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Feed - Sunset Pop Theme</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-orange-50"> 
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-orange-600"> Social Feed</h1>
+            
+            <div class="flex items-center space-x-4">
+                <strong id="welcome-message" class="text-gray-700 font-semibold">Welcome, Guest</strong>
+                <button id="logout-btn" class="bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-md transition duration-150 ease-in-out">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </header>
+
+<div class="max-w-3xl mx-auto my-8">
+
+    <div class="bg-white p-6 shadow-xl rounded-xl border border-gray-200 mb-8">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Create New Post</h2>
+        
+        <div class="mb-3">
+            <textarea id="post-content" 
+                      rows="2" 
+                      placeholder="What's on your mind?..."
+                      class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 transition duration-150 ease-in-out resize-none text-sm"
+            ></textarea>
+        </div>
+
+        <div class="flex items-center space-x-4 mb-4">
+            <input type="url" 
+                   id="image-link" 
+                   placeholder="Image Link (optional URL)"
+                   class="flex-grow px-3 py-2 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 transition duration-150 ease-in-out text-sm"
+            >
+            <button id="create-post-btn" type="submit"
+                    class="bg-orange-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300 transition duration-200 shadow-md whitespace-nowrap text-sm"
+            >
+                Create Post
+            </button>
+        </div>
+    </div>
+
+    <div class="flex space-x-3 items-center mb-6 border-b border-gray-200 pb-3">
+        <span class="text-sm font-medium text-gray-700 mr-2">Sort By:</span>
+        
+        <button id="sort-latest" class="px-4 py-1.5 text-sm font-semibold rounded-full bg-orange-500 text-white hover:bg-orange-600 transition duration-150 shadow-md">
+            Latest First
+        </button>
+        
+        <button id="sort-liked" class="px-4 py-1.5 text-sm font-medium rounded-full bg-amber-100 text-orange-700 hover:bg-amber-200 transition duration-150">
+            Most Liked
+        </button>
+        
+        <button id="sort-oldest" class="px-4 py-1.5 text-sm font-medium rounded-full bg-amber-100 text-orange-700 hover:bg-amber-200 transition duration-150">
+            Oldest First
+        </button>
+    </div>
+
+    <div id="posts-container" class="space-y-6">
+        <div id="empty-feed-message" class="text-center p-12 border-2 border-dashed border-gray-300 rounded-lg bg-white">
+            <p class="text-gray-500 font-medium text-lg">Your posts will appear here.</p>
+            <p class="text-gray-400 mt-2">Start by clicking 'Create Post' above!</p>
+        </div>
+    </div>
+
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
